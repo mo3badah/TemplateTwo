@@ -1,0 +1,48 @@
+html{
+	scroll-behavior: smooth;}
+/*End the Variables*/
+/*global values*/
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+/*google fonts*/
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+/*ul pre work*/
+ul{
+	list-style: none;
+}
+/*container is the most important element in the design*/
+.container{
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*media for bootstrap version 3*/
+/*small devices*/
+@media (min-width: 768px) {
+	.container{
+		width: 750px;
+	}
+	
+}
+/*medium devices*/
+@media (min-width: 992px) {
+	.container{
+		width: 970px;
+	}
+	
+}
+/*large devices*/
+@media (min-width: 1200px) {
+	.container{
+		width: 1170px;
+	}
+	
+}
