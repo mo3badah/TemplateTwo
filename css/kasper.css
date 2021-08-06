@@ -1,3 +1,8 @@
+/*root elements*/
+:root{
+	--main-color: #a2a2a2;
+}
+/*html main elements*/
 html{
 	scroll-behavior: smooth;}
 /*End the Variables*/
@@ -12,6 +17,7 @@ html{
 /*google fonts*/
 body{
 	font-family: 'Open Sans', sans-serif;
+	background-color: black;
 }
 /*ul pre work*/
 ul{
@@ -46,3 +52,32 @@ ul{
 	}
 	
 }
+
+/*start header*/
+header{
+
+}
+header .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position : relative;
+}
+/*border with pesedu elements*/
+header .container::after{
+	content: "";
+	width: calc(100% - 30px); /*all width - padding*/
+	height: 1px;
+	background-color: var(--main-color);
+	position: absolute;
+	bottom: 0;
+	left: 15px;
+}
+header .logo img{
+	height: 40px;
+}
+header nav{
+	flex: 1; /* so it can get all the space */
+}
+
+/*end header*/
