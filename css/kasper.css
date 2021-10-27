@@ -6,7 +6,6 @@
 	--transition-time: .3s;
 	--section-padding: 100px;
 }
-/*html main elements*/
 html{
 	scroll-behavior: smooth;
 }
@@ -55,10 +54,9 @@ ul{
 }
 /*large devices*/
 @media (min-width: 1200px) {
-	.container{
-		width: 1170px;
+	.container {
+		width : 1170px;
 	}
-	
 }
 /*start components   */
 .main-heading{
@@ -206,7 +204,6 @@ header nav .form i{
 /*end header*/
 
 /*start landing*/
-
 .landing{
 	min-height : 100vh;
 	background-color: var(--main-color);
@@ -230,11 +227,10 @@ header nav .form i{
 	width: 50%;
 	color: white;
 	padding: 50px;
-	background-color: var(--transparent-color);
+	background: radial-gradient(circle farthest-corner at top left, rgba(63,94,251,0.5102415966386555) 0%, rgba(252,70,107,0.6699054621848739) 100%);
 	display: flex;
 	justify-content: flex-end;
 }
-
 .landing .text .content{
 	max-width: 500px;
 }
@@ -279,7 +275,7 @@ header nav .form i{
 	position: absolute;
 	left: 50%;
 	bottom: 20px;
-	transform: translateX(-50%);
+	/*transform: translateX(-50%);*/
 	display: flex;
 }
 .landing .bullets li{
@@ -289,9 +285,12 @@ header nav .form i{
 	border-radius: 50%;
 	margin-right: 10px;
 }
-.landing .bullets li.active{
+.landing .bullets li:hover{
 	background-color: var(--main-color);
 	border-color: var(--main-color);
+}
+.landing .change-background:hover{
+	color: var(--main-color);
 }
 /*end landing*/
 
@@ -309,7 +308,15 @@ header nav .form i{
 	}
 }
 .services .ser-box{
+	border-radius: 6px;
+	padding: 3rem 2rem;
+	box-shadow: 0 10px 40px -14px rgba(0,0,0,0.25);
 	display: flex;
+	transition: 1s;
+}
+.services .service-container .ser-box:hover{
+	transform: translateY(10px);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .services .ser-box i{
 	margin-right: 50px;
@@ -353,6 +360,7 @@ header nav .form i{
 		height: 1000px;
 	}
 }
+ /*overlay layer*/
 .design::before{
 	content: "";
 	position: absolute;
@@ -417,7 +425,7 @@ header nav .form i{
 .portfoilo .shuffle li{
 	padding: 10px;
 }
-.portfoilo .shuffle .active{
+.portfoilo .shuffle li:hover{
 	background-color: var(--main-color);
 	color: white;
 }
@@ -435,7 +443,7 @@ header nav .form i{
 	bottom: 0;
 }
 .portfoilo .imgs-container .box:hover img{
-	transform: scale(1.3) rotate(5deg);
+	transform: scale(1.3) rotate(3deg);
 	opacity: .8;
 }
 @media (min-width : 768px) {
@@ -456,7 +464,8 @@ header nav .form i{
 	position: absolute;
 	padding: 20px;
 	left: 0;
-	background-color: white;
+	background-image: -webkit-linear-gradient(to bottom, transparent 0%, #ffffff 100%);
+	background-image: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
 	transition: .3s;
 	bottom: -100%;
 	width: 100%;
@@ -472,7 +481,7 @@ header nav .form i{
 .portfoilo .more{
 	background-color: var(--main-color);
 	color: white;
-	padding: 20px 15px;
+	padding: 15px 30px;
 	display: block;
 	width: fit-content;
 	margin: 30px auto;
@@ -574,8 +583,17 @@ header nav .form i{
 .status .container .box{
 	color: white;
 	padding: 50px;
+	margin: 10px;
 	background-color: var(--transparent-color);
+	border-radius: 6px;
+	box-shadow: 0 10px 40px -14px rgba(0,0,0,0.25);
+	transition: 1s;
 }
+.status .container .box:hover{
+	transform: translateY(10px);
+	box-shadow: 0 1px 3px rgb(0, 0, 255), 0 1px 2px rgb(52, 0, 165);
+}
+
 @media (max-width : 767px) {
 	.status .container .box{
 		flex-basis: 100%;
@@ -588,7 +606,7 @@ header nav .form i{
 }
 @media (min-width : 992px) {
 	.status .container .box{
-		flex-basis: 25%;
+		flex-basis: 22%;
 	}
 }
 .status .box i{
@@ -644,7 +662,17 @@ header nav .form i{
 .our-skills .testimonials .content{
 	display: flex;
 	margin-bottom: 30px;
-	align-items: center;
+	border-radius: 6px;
+	box-shadow: 0 10px 40px -14px rgba(0,0,0,0.25);
+	background-image: linear-gradient(to right, rgba(36, 198, 220, 0.33) 0%, rgba(81, 74, 157, 0.34) 51%, rgba(36, 198, 220, 0.3) 100%);
+	background-size: 200% auto;
+	transition: 1s;
+	padding: 10px;
+}
+.our-skills .testimonials .content:hover{
+	transform: translateY(10px);
+	background-position: right center;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .our-skills .testimonials .content img{
 	width: 100px;
@@ -684,7 +712,7 @@ header nav .form i{
 	border-radius: 50%;
 	margin-right: 10px;
 }
-.testimonials .bullets li.active{
+.testimonials .bullets li:hover{
 	background-color: var(--main-color);
 	border-color: var(--main-color);
 }
@@ -705,8 +733,14 @@ header nav .form i{
 	display: block;
 	position: relative;
 	height: 100%;
-	background-color: var(--main-color);
+	background-image: linear-gradient(to right, #24C6DC 0%, #514A9D  51%, #24C6DC  100%);
 	border-radius: 10px;
+	transition: 0.5s;
+	background-size: 200% auto;
+	box-shadow: 0 0 20px #eee;
+}
+.our-skills .skills .prog-holder .prog:hover  span{
+	background-position: right center; /* change the direction of the change here */
 }
 .our-skills .skills .prog-holder .prog span::before{
 	content: attr(data-progress);
@@ -752,12 +786,14 @@ header nav .form i{
 .quote .container{
 	position: relative;
 }
-.quote q{
-	line-height: 2;
-	font-weight: bold;
-	font-size: 30px;
-	display: block;
-	
+.quote q {
+	line-height : 2;
+	font-weight : bold;
+	font-size   : 30px;
+	display     : block;
+	background-image: -webkit-linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.37) 100%);
+	background-image: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.34) 100%);
+	box-shadow: 0 10px 40px -14px rgba(0, 0, 0, 0.41);
 }
 .quote q::before{
 	font-family: "Font Awesome 5 Free";
@@ -777,8 +813,9 @@ header nav .form i{
 }
 .quote span{
 	position: absolute;
-	right: 10px;
+	right: 20px;
 	margin-top: 20px;
+	font-weight: bolder;
 }
 @media (max-width : 767px) {
 	.quote q{
@@ -808,7 +845,16 @@ header nav .form i{
 	
 }
 .pricing .plans .plan{
+	border-radius: 6px;
+	padding: 3rem 2rem;
+	box-shadow: 0 10px 40px -14px rgba(0,0,0,0.25);
 	text-align: center;
+	position: relative;
+	transition: 1s;
+}
+.pricing .plans .plan:hover{
+	transform: translateY(10px);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .pricing .plans .plan .head{
 	padding: 40px 20px;
@@ -864,9 +910,15 @@ header nav .form i{
 	display: block;
 	padding: 10px 20px;
 	margin: 30px auto;
-	border: 1px solid var(--main-color);
 	width: fit-content;
 	text-decoration: none;
+	box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+	background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);
+	transition: 0.5s;
+	background-size: 200% auto;
+}
+.pricing .plans a:hover{
+	background-position: right center;
 }
 .pricing p{
 	text-align: center;
@@ -877,12 +929,19 @@ header nav .form i{
 	display: block;
 	padding: 15px 30px;
 	margin: 30px auto;
-	background-color: var(--main-color);
+	background-size: 200% auto;
 	color: white;
 	width: fit-content;
 	text-decoration: none;
 	text-transform: capitalize;
 	font-weight: bold;
+	box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+	background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);
+	transition: 0.5s;
+}
+#contactUs:hover{
+	background-position: right center;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 /*start pricing*/
 
@@ -936,6 +995,8 @@ header nav .form i{
 	border-right: none;
 	color: white;
 	
+	
+	
 }
 .subscribe form input[type="submit"]{
 	width: 130px;
@@ -949,6 +1010,7 @@ header nav .form i{
 .subscribe form input[type="submit"]:focus,
 .subscribe form input[type="email"]:focus{
 	outline: none;
+	
 }
 .subscribe form ::placeholder{
 	color: white;
@@ -984,19 +1046,16 @@ header nav .form i{
 }
 .contactus form input[type="text"],
 .contactus form input[type="email"],
+.contactus form textarea,
 .contactus form input[type="submit"]{
-	border: 1px solid gray;
+	/*border: 1px solid gray;*/
 	background: none;
 	padding: 20px 20px 20px 40px;
+	border-image: linear-gradient(to right, rgba(36, 198, 220, 0.33) 0%, rgba(81, 74, 157, 0.34) 51%, rgba(36, 198, 220, 0.3) 100%) 4%;
 	border-radius: 10px;
-	/*caret-color: var(--main-color);*/
 }
 .contactus form textarea{
-	border: 1px solid gray;
-	background: none;
-	padding: 20px 20px 20px 40px;
 	height: 200px;
-	border-radius: 10px;
 }
 
 .contactus form :focus{
@@ -1018,6 +1077,19 @@ header nav .form i{
 	flex-direction: column;
 	gap: 80px 20px;
 }
+.contactus .info div{
+	border-radius: 6px;
+	padding: 3rem 2rem;
+	box-shadow: 0 10px 40px -14px rgba(0,0,0,0.25);
+	text-align: center;
+	position: relative;
+	transition: 1s;
+}
+.contactus .info div:hover{
+	transform: translateY(10px);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
 .contactus .info p{
 	color: gray;
 	margin-top: 20px;
@@ -1077,8 +1149,17 @@ footer .container p:not(.copy-right){
 	border-bottom: 1px solid white;
 	margin: 20px auto;
 }
-footer .container .social-icons i{
+footer .container .social-icons a i{
 	padding: 10px 15px;
+	background-image: linear-gradient(to right, #24C6DC 0%, #514A9D  51%, #24C6DC  100%);
+	border-radius: 10px;
+	transition: 0.5s;
+	background-size: 200% auto;
+	box-shadow: 0 0 5px #eee;
+	margin-left: 10px;
+}
+footer .container .social-icons a:hover  i{
+	background-position: right center; /* change the direction of the change here */
 }
 footer .copy-right{
 	margin: 60px;
