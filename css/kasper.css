@@ -913,7 +913,7 @@ header nav .form i{
 	width: fit-content;
 	text-decoration: none;
 	box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
-	background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);
+	background-image: linear-gradient(to right, rgba(36, 198, 220, 0.33) 0%, rgba(81, 74, 157, 0.34) 51%, rgba(36, 198, 220, 0.3) 100%);
 	transition: 0.5s;
 	background-size: 200% auto;
 }
@@ -930,13 +930,13 @@ header nav .form i{
 	padding: 15px 30px;
 	margin: 30px auto;
 	background-size: 200% auto;
-	color: white;
+	color: blue;
 	width: fit-content;
 	text-decoration: none;
 	text-transform: capitalize;
 	font-weight: bold;
 	box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
-	background-image: linear-gradient(to right, #895cf2 0%, #ffabf4 50%, #895cf2 100%);
+	background-image: linear-gradient(to right, rgba(36, 198, 220, 0.33) 0%, rgba(81, 74, 157, 0.34) 51%, rgba(36, 198, 220, 0.3) 100%);
 	transition: 0.5s;
 }
 #contactUs:hover{
